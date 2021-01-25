@@ -18,6 +18,7 @@ abstract class Dog extends Animal
         // initialise instance variables
         x = 0;
         species = Species.DOG;
+        food = Food.OMNIVORE;
     }
 
     /**

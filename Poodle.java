@@ -13,11 +13,12 @@ public class Poodle extends Dog
     /**
      * Constructor for objects of class Poodle
      */
-    public Poodle(String animalName)
+    public Poodle(String animalName, Color theColor)
     {
         // initialise instance variables
         name = animalName;
         breed = Breed.POODLE;
+        color = theColor;
     }
 
     

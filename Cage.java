@@ -1,4 +1,6 @@
 
+import java.util.ArrayList;
+
 /**
  * Write a description of class Cage here.
  *
@@ -10,40 +12,43 @@ public class Cage
     // instance variables - replace the example below with your own
     private int cageNumber;
 
-    private Animal[] animals = new Animal[5];
-    private int animalNumber;
+    private ArrayList<Animal> animals;
+    //private Animal[] animals = new Animal[5];
+    //private int animalNumber;
     
-    /**
-     * Constructor for objects of class Cage
-     */
-    public Cage()
-    {
-        // initialise instance variables
-     
-        animalNumber = 0;
-        //poodles = new Poodle[5];
-        /*
-        for (int i = 0 ; i < 5 ; i++) {
-            poodles[i] = new Poodle();
-        }
-        */
-        //poodles[0] = new Poodle("Cuty");
-        
-    }
-
     public Cage(int number)
     {
         // initialise instance variables
      
-        animalNumber = 0;
+        //animalNumber = 0;
         cageNumber = number;
         
     }
     
-    public void addAnimal(Animal inAnimal)
+    public boolean addAnimal(Animal inAnimal)
     {
-        animals[animalNumber] = inAnimal;
-        animalNumber = animalNumber + 1;
+        boolean retval = true;
+        //animals[animalNumber] = inAnimal;
+        //animalNumber = animalNumber + 1;
+        
+        // check the animal will get eaten, 
+        for (int i = 0; i < animals.size(); i++) {
+            
+        }
+        // check if the cage is full,
+        if(animals.size() > 4 )
+        {
+            retval = false;
+        }
+        else
+        {
+        // if not:
+            animals.add(inAnimal);
+        }
+        
+        // else retval = false;
+        
+        return retval;
     }
     
     public void setNumber(int number)

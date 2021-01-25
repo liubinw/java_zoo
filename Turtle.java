@@ -17,6 +17,9 @@ abstract class Turtle extends Animal
     {
         // initialise instance variables
         x = 0;
+        species = Species.TURTLE;
+        food = Food.HERBIVORE;
+        
     }
 
     /**

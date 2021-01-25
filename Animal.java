@@ -9,12 +9,6 @@
  */
 abstract class Animal
 {
-enum Color {
-  Brown,
-  Red,
-  Green,
-  Yellow
-}
 
 enum Species {
     DOG,
@@ -28,7 +22,20 @@ enum Species {
 enum Breed {
     POODLE,
     LABRADOR,
-    BANGAR
+    BANGAR,
+    MALAYAN,
+    KEESHOND,
+    TIBTANMASTIFF,
+    SNAPPING,
+    MUD,
+    POTBELLIED,
+    BERKSHIRE
+}
+
+enum Food {
+    OMNIVORE,
+    HERBIVORE,
+    CARNIVORE
 }
     // instance variables - replace the example below with your own
     protected String name;
@@ -36,6 +43,7 @@ enum Breed {
     protected int x;
     protected Species species;
     protected Breed breed;
+    protected Food food;
     
     
     

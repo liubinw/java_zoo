@@ -29,20 +29,31 @@ public class Zoo
         name = zooName;
         
         System.out.println("This is the Zoo constructor, zoo: " + name);
-        
-        /*
-        myCages[0] = new Cage();
-        myCages[1] = new Cage();
-        myCages[0].setNumber(100);
-        myCages[1].setNumber(200);
-        */
        
-        Poodle poodle1 = new Poodle("p1");
-        myCages[0].addAnimal(poodle1);
-        Poodle poodle2 = new Poodle("cutty");
-        myCages[0].addAnimal(poodle2);
+        
     }
 
+    public boolean receiveAnimal(Animal oneAnimal)
+    {
+        //boolean retval = true;
+        
+        // find a good cage, and put this animal in:
+        // loop through cages, 
+        // if case is good
+        for(int i=0;i<8;++i)
+        {
+            if(myCages[i].addAnimal(oneAnimal)==true)
+            {
+                return true;
+            }
+            
+        }
+        
+        //return myCages[0].addAnimal(oneAnimal);
+        //return retval;
+        return false;
+    }
+    
     /**
      * An example of a method - replace this comment with your own
      *
