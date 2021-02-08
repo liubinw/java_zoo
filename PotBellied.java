@@ -10,7 +10,7 @@ public class PotBellied extends Pig
     public PotBellied(String animalName, Color theColor)
     {
         // initialise instance variables
-        name = animalName;
+        super(animalName);
         breed = Breed.POTBELLIED;
         color = theColor;
     }

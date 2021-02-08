@@ -10,7 +10,7 @@ public class Berkshire extends Pig
     public Berkshire(String animalName, Color theColor)
     {
         // initialise instance variables
-        name = animalName;
+        super(animalName);
         breed = Breed.BERKSHIRE;
         color = theColor;
     }

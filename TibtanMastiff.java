@@ -10,7 +10,7 @@ public class TibtanMastiff extends Lion
     public TibtanMastiff(String animalName, Color theColor)
     {
         // initialise instance variables
-        name = animalName;
+        super(animalName);
         breed = Breed.TIBTANMASTIFF;
         color = theColor;
     }

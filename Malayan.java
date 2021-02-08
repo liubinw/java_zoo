@@ -11,7 +11,7 @@ public class Malayan extends Tiger
     public Malayan(String animalName, Color theColor)
     {
         // initialise instance variables
-        name = animalName;
+        super(animalName);
         breed = Breed.MALAYAN;
         color = theColor;
     }

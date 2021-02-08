@@ -10,7 +10,7 @@ public class Snapping extends Turtle
     public Snapping(String animalName, Color theColor)
     {
         // initialise instance variables
-        name = animalName;
+        super(animalName);
         breed = Breed.SNAPPING;
         color = theColor;
     }

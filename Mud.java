@@ -10,7 +10,7 @@ public class Mud extends Turtle
     public Mud(String animalName, Color theColor)
     {
         // initialise instance variables
-        name = animalName;
+        super(animalName);
         breed = Breed.MUD;
         color = theColor;
     }

@@ -38,33 +38,30 @@ enum Food {
     CARNIVORE
 }
     // instance variables - replace the example below with your own
-    protected String name;
+    final protected String name;
     protected Color color;
-    protected int x;
     protected Species species;
     protected Breed breed;
     protected Food food;
     
+    //final protected String test;
+    Food get_food()
+    {
+        return food;
+    }
     
+    Species get_species()
+    {
+        return species;
+    }
     
     /**
      * Constructor for objects of class Animal
      */
-    public Animal()
+    public Animal(String aName)
     {
         // initialise instance variables
-        x = 0;
+        name = aName;
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
 }

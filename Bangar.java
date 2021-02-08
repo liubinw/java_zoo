@@ -11,7 +11,7 @@ public class Bangar extends Tiger
     public Bangar(String animalName, Color theColor)
     {
         // initialise instance variables
-        name = animalName;
+        super(animalName);
         breed = Breed.BANGAR;
         color = theColor;
     }

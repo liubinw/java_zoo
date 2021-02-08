@@ -15,7 +15,7 @@ public class Labrador extends Dog
     public Labrador(String animalName, Color theColor)
     {
         // initialise instance variables
-        name = animalName;
+        super(animalName);
         breed = Breed.POODLE;
         color = theColor;
     }
