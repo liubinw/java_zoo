@@ -1,4 +1,7 @@
 
+import java.util.ArrayList;
+import java.util.Collections;  // Import the Collections class
+
 /**
  * Write a description of class Zoo here.
  *
@@ -15,59 +18,90 @@ public class Zoo
                 };
                 //new Cage[8];
     private String name;
+    
+    private ArrayList<Animal> animals = new ArrayList<Animal>();
 
+    public void report()
+    {
+        for(int i=0;i<8;++i)
+        {
+            myCages[i].report();
+          
+        }    
+    }
+    
+    public void report1()
+    {
+        for (int i = 0; i < animals.size(); i++) {  
+            animals.get(i).report();
+        }    
+    }
+    
+    public void cageAnimals()
+    {
+         for (int i = 0; i < animals.size(); i++) {  
+            receiveAnimal(animals.get(i));
+        }         
+    }
     
     public void fillAnimals()
     {
         Animal aAnimal; 
         // add lots of animals:
-        for(int i=0; i<3; ++i)
+        for(int i=0; i<2; ++i)
         {
             
             aAnimal = new Poodle("poodle"+i, Color.RED);
+            animals.add(aAnimal);
+            /*
             if(receiveAnimal(aAnimal)==false)
             {
                 System.out.println("failed adding Poodle " + i);
             }
+            */
             
             aAnimal = new Labrador("labrador"+i, Color.RED);
-            receiveAnimal(aAnimal);    
+            animals.add(aAnimal);
+            //receiveAnimal(aAnimal);    
             
             aAnimal = new Bangar("bangar"+i, Color.RED);
-            receiveAnimal(aAnimal); 
+            animals.add(aAnimal);
+            //receiveAnimal(aAnimal); 
             
             aAnimal = new Malayan("malayan"+i, Color.RED);
-            receiveAnimal(aAnimal); 
+            animals.add(aAnimal);
+            //receiveAnimal(aAnimal); 
             
             aAnimal = new Keeshond("keeshond"+i, Color.RED);
-            receiveAnimal(aAnimal); 
+            animals.add(aAnimal);
+            //receiveAnimal(aAnimal); 
                         
             aAnimal = new TibtanMastiff("tibtanmastiff"+i, Color.RED);
-            receiveAnimal(aAnimal); 
+            animals.add(aAnimal);
+            //receiveAnimal(aAnimal); 
             
-            aAnimal = new Snapping("l"+i, Color.RED);
-            receiveAnimal(aAnimal); 
+            aAnimal = new Snapping("Snapping"+i, Color.RED);
+            animals.add(aAnimal);
+            //receiveAnimal(aAnimal); 
             
-            aAnimal = new Mud("l"+i, Color.RED);
-            receiveAnimal(aAnimal); 
+            aAnimal = new Mud("Mud"+i, Color.RED);
+            animals.add(aAnimal);
+            //receiveAnimal(aAnimal); 
             
-            aAnimal = new Berkshire("l"+i, Color.RED);
-            receiveAnimal(aAnimal); 
+            aAnimal = new Berkshire("Berkshire"+i, Color.RED);
+            animals.add(aAnimal);
+            //receiveAnimal(aAnimal); 
             
-            aAnimal = new PotBellied("l"+i, Color.RED);
-            receiveAnimal(aAnimal); 
+            aAnimal = new PotBellied("PorBellied"+i, Color.RED);
+            animals.add(aAnimal);
+            //receiveAnimal(aAnimal); 
             
             
         }
         
         
-        /*
-        Poodle poodle1 = new Poodle("p1", Color.RED);
-        Poodle poodle2 = new Poodle("cutty",Color.BLUE);
-        
-        zoo1.receiveAnimal(poodle1);
-        zoo1.receiveAnimal(poodle2);
-        */
+        Collections.sort(animals);
+       
         
     }
     
@@ -84,6 +118,7 @@ public class Zoo
         System.out.println("This is the Zoo constructor, zoo: " + name);
        
         fillAnimals();
+        //cageAnimals();
         
     }
 

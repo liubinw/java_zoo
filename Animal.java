@@ -7,7 +7,8 @@
  * @author (your name)
  * @version (a version number or a date)
  */
-abstract class Animal
+abstract class Animal implements Comparable<Animal>
+//abstract class Animal
 {
 
 enum Species {
@@ -22,12 +23,12 @@ enum Species {
 enum Breed {
     POODLE,
     LABRADOR,
+    MUD,
     BANGAR,
     MALAYAN,
     KEESHOND,
     TIBTANMASTIFF,
     SNAPPING,
-    MUD,
     POTBELLIED,
     BERKSHIRE
 }
@@ -43,6 +44,22 @@ enum Food {
     protected Species species;
     protected Breed breed;
     protected Food food;
+    
+    public String get_name()
+    {
+        return name;
+    }
+    
+    public Breed get_breed()
+    {
+        return breed;
+    }
+    
+    public void report()
+    {
+        System.out.println("Hi, my name is:"+name+" my color is: " + color);
+        System.out.println("    my species is:"+species+" my breed is: " + breed + " food:" + food);
+    }
     
     //final protected String test;
     Food get_food()
@@ -63,5 +80,14 @@ enum Food {
         // initialise instance variables
         name = aName;
     }
+
+    
+    @Override
+    public int compareTo(Animal compare_animal) {
+        //return this.name.compareTo(compare_animal.get_name());
+        int in_breed = compare_animal.get_breed().ordinal();
+        return breed.ordinal() - in_breed;
+    }
+    
 
 }

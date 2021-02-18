@@ -13,6 +13,7 @@ public class Main
         System.out.println("Hello Welcome to the Zoo Application");
         Zoo zoo1 = new Zoo("Toronto Zoo");
         
+        zoo1.report();
         
         //Test t = Test.T1;
         //Breed b = Breed.POODLE;

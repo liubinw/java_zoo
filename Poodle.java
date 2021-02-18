@@ -8,7 +8,7 @@
 public class Poodle extends Dog
 {
     // instance variables - replace the example below with your own
-    final private String x;
+    //final private String x;
 
     /**
      * Constructor for objects of class Poodle
@@ -19,7 +19,7 @@ public class Poodle extends Dog
         super(animalName);
         breed = Breed.POODLE;
         color = theColor;
-        x = animalName;
+        //x = animalName;
         //test = animalName;
     }
 
